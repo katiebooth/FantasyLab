@@ -1,24 +1,25 @@
 import Fighters.Fighter;
-import Rooms.IPlayable;
+import MagicPeople.Player;
 import Rooms.Room;
 
 public class Game {
     Room room;
+    Player player;
 
-    public Game(Room room, Fighter fighter) {
+    public Game(Room room, Player player) {
         this.room = room;
-        this.fighter = fighter;
+        this.player = player;
     }
 
     public Room getRoom() {
         return room;
     }
 
-    public IPlayable getPlayer() {
-        return fighter;
+    public Player getPlayer() {
+        return player;
     }
 
-    public String playGame(Room room, Fighter player){
-        return "Game is in room " + room +" with "+ player.getName();
+    public String playGame(Room room, Player player){
+        return "Game is in room " + room.getName() +" with "+ player.getName();
     }
 }

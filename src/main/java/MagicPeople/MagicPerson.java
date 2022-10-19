@@ -1,6 +1,6 @@
 package MagicPeople;
 
-public abstract class MagicPerson implements ICastSpell {
+public abstract class MagicPerson extends Player implements ICastSpell {
     String name;
     Spell spell;
     int gold;
@@ -9,10 +9,8 @@ public abstract class MagicPerson implements ICastSpell {
 
 
     public MagicPerson(String name, Spell spell, int gold, int health, Creature creature) {
-        this.name = name;
+        super(name, gold, health);
         this.spell = spell;
-        this.gold = gold;
-        this.health = health;
         this.creature = creature;
     }
 

@@ -1,10 +1,11 @@
-public abstract class PlayableCharacter {
+package MagicPeople;
 
-    private String name;
-    private int gold;
-    private int health;
+public class Player {
+    String name;
+    int gold;
+    int health;
 
-    public PlayableCharacter(String name, int gold, int health) {
+    public Player(String name, int gold, int health) {
         this.name = name;
         this.gold = gold;
         this.health = health;

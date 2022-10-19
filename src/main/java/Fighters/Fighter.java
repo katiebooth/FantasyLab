@@ -1,8 +1,8 @@
 package Fighters;
 
-import Rooms.IPlayable;
+import MagicPeople.Player;
 
-public abstract class Fighter implements IFight, IPlayable {
+public abstract class Fighter extends Player implements IFight {
     String name;
     int gold;
     int health;
@@ -10,9 +10,7 @@ public abstract class Fighter implements IFight, IPlayable {
 
 
     public Fighter(String name, Weapon weapon, int gold, int health) {
-        this.name = name;
-        this.gold = gold;
-        this.health = health;
+        super(name, gold, health);
         this.weapon = weapon;
     }
 
@@ -35,6 +33,5 @@ public abstract class Fighter implements IFight, IPlayable {
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
-
 
 }

@@ -3,7 +3,8 @@ package Fighters;
 public enum Weapon {
     SWORD("sword", 40),
     AXE("axe", 30),
-    CLUB("club", 20)
+    CLUB("club", 20),
+    MACE("mace", 5);
     ;
 
     int power;
