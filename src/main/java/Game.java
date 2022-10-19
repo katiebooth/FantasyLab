@@ -1,25 +1,32 @@
-import Fighters.Fighter;
-import MagicPeople.Player;
+import MagicPeople.Wizard;
+
 import Rooms.Room;
 
 public class Game {
     Room room;
-    Player player;
+    Wizard wizard;
 
-    public Game(Room room, Player player) {
+    public Game(Room room, Wizard wizard) {
         this.room = room;
-        this.player = player;
+        this.wizard = wizard;
     }
 
     public Room getRoom() {
         return room;
     }
 
-    public Player getPlayer() {
-        return player;
+    public Wizard getWizard() {
+        return wizard;
     }
 
-    public String playGame(Room room, Player player){
-        return "Game is in room " + room.getName() +" with "+ player.getName();
+    public void playGame(){
+        System.out.println("Game is in " + room.getName() +" with " + wizard.getName()
+                + " and their " +wizard.getCreature().getName()+". "
+                + wizard.getName()+" is confronted with " + room.getEnemy().getName());
+        System.out.println("Player health is "+ wizard.getHealth() + ". " +
+                "Enemy health is "+room.getEnemy().getHealth());
+        wizard.castSpell(wizard.getSpell(), room.getEnemy());
+        room.attack(wizard, room.getEnemy().getWeapon());
+        System.out.println("Now Player health is "+ wizard.getHealth() +".");
     }
 }

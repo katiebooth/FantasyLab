@@ -1,9 +1,9 @@
 package MagicPeople;
 
-public class Player {
-    String name;
-    int gold;
-    int health;
+public abstract class Player {
+    private String name;
+    private int gold;
+    protected int health;
 
     public Player(String name, int gold, int health) {
         this.name = name;
@@ -22,4 +22,6 @@ public class Player {
     public int getHealth() {
         return health;
     }
+
+
 }

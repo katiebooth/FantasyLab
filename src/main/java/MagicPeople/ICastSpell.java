@@ -1,5 +1,7 @@
 package MagicPeople;
 
+import Rooms.Enemy;
+
 public interface ICastSpell {
-    String castSpell(Spell spell);
+    void castSpell(Spell spell, Enemy enemy);
 }

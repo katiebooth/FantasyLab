@@ -2,17 +2,32 @@ package Rooms;
 
 import Fighters.Weapon;
 
-public enum Enemy {
-    TROLL("Troll",Weapon.CLUB),
-    ORC("Orc", Weapon.MACE);
+public class Enemy {
 
     String name;
     Weapon weapon;
+    int health;
 
-    Enemy(String name, Weapon weapon) {
+    public Enemy(String name, Weapon weapon, int health) {
         this.name = name;
         this.weapon = weapon;
+        this.health = health;
     }
 
+    public String getName() {
+        return name;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void takeDamage(int damage){
+        health -= damage;
+    }
+
+}
