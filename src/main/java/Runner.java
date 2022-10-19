@@ -18,8 +18,8 @@ public class Runner {
             Enemy enemy;
 
             cleric = new Cleric("Madame Pomprey", HealingTool.POTION);
-            enemy = new Enemy("Orc", Weapon.MACE, 50);
-            wizard = new Wizard("Bellatrix", 100, 100, Spell.FIENDFYRE, Creature.HIPPOGRIFF);
+            enemy = new Enemy("Orc", Weapon.CLUB, 80);
+            wizard = new Wizard("Bellatrix", 100, 100, Spell.FLIPENDO, Creature.HIPPOGRIFF);
             room = new Room ("Room of requirement", 50, enemy, cleric);
             game = new Game(room, wizard);
 

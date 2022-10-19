@@ -1,8 +1,11 @@
 package MagicPeople;
 
+import Healers.Cleric;
 import Rooms.Enemy;
 
 public class Wizard extends MagicPerson{
+
+    Cleric cleric;
 
     public Wizard(String name, int gold, int health, Spell spell, Creature creature) {
         super(name, gold, health, spell, creature);
@@ -24,5 +27,13 @@ public class Wizard extends MagicPerson{
                 +getCreature().getProtectionPower()+". Damage inflicted is only " + damageToInflict);
     }
 
+    public void boostHealth(Cleric cleric) {
+        int healthBoost = cleric.getHealingTool().getHealingPower();
+        health += healthBoost;
+        System.out.println("Health boosted by "+ healthBoost+". Thanks " +cleric.getName()+". Health is now "+ health);
+    }
 
+    public void collectCoins(int availableGold) {
+        gold += availableGold;
+    }
 }

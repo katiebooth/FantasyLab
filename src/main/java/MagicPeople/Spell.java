@@ -1,9 +1,9 @@
 package MagicPeople;
 
 public enum Spell {
-    FIENDFYRE("fiendfyre", "This sets fire to things", 40),
-    FLIPENDO("flipendo", "This will knock your enemies back", 30),
-    MELOFORS("melofors", "This will encase your enemy's head in a pumpkin", 10);
+    FIENDFYRE("fiendfyre", "This sets fire to things", 20),
+    FLIPENDO("flipendo", "This will knock your enemies back", 10),
+    MELOFORS("melofors", "This will encase your enemy's head in a pumpkin", 5);
 
     String name;
     String desc;

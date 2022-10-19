@@ -2,7 +2,7 @@ package MagicPeople;
 
 public abstract class Player {
     private String name;
-    private int gold;
+    protected int gold;
     protected int health;
 
     public Player(String name, int gold, int health) {
